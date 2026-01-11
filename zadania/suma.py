@@ -42,7 +42,7 @@ if (numberOfParams == 1):
     sys.exit(1)
 
 if (numberOfParams == 2):
-    # 3.1
+    # 3.1 suma_2()
     a = int(sys.argv[1])
     b = int(sys.argv[2])
     # 3.2.
@@ -52,7 +52,7 @@ if (numberOfParams == 2):
 
 # Krok 4. 
 if (numberOfParams == 3):
-    # 4.1
+    # 4.1 suma_3()
     a = int(sys.argv[1])
     b = int(sys.argv[2])
     c = int(sys.argv[3])
