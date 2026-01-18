@@ -43,26 +43,30 @@ except ValueError:
 
 
 # 3. Warunk 1
-if operation == "+":
-    result = par1 + par2
-    print("Wynik dodawania wynosi: " ,result)
+def dodawanie(a, b):
+    if operation == "+":
+        result = a + b
+        print("Wynik dodawania wynosi: " ,result)
 
 # 4. Warunk 2
-if operation == "-":
-    result = par1 - par2
-    print("Wynik odejmowania wwynosi: " ,result)
+def odejmowanie(a, b):
+    if operation == "-":
+        result = a - b
+        print("Wynik odejmowania wwynosi: " ,result)
 
 # 5. Warunk 3
-if  operation == "*":
-    result = par1 * par2
-    print("Wynik mnozenia wynosi: " ,result)
+def mnozenie(a, b):
+    if operation == "*":
+        result = a * b
+        print("Wynik mnozenia wynosi: " ,result)
 
 # 6. Warunk 4
-if  operation == "/":
-    try:
-        result = par1 // par2
-    except ZeroDivisionError:
-        print("Nie mozna dzielic przez 0") 
+def dzielenie(a, b):
+    if operation == "//":
+        try:
+            result = a // b
+        except ZeroDivisionError:
+            print("Nie mozna dzielic przez 0") 
         sys.exit(1) # Zakończenie programu z kodem wyjścia "1"
     
     print("Wynik dzielenia wynosi: " ,result)
