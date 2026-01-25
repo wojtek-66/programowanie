@@ -1,79 +1,33 @@
 import sys
 
-# Opis problemu (programu):
-# --------------------------
-# Program pobiera parametry od uzytkownika i zamienia na liczbe calkowita.
-# 1. Dla operacji "+" wykonuje operacje dodawania
-# 2. Dla operacji "-" wykonuje operacje odejmowania
-# 3. Dla operacji "*" wykonuje operacje mnozenia
-# 4. Dla operacji "//" wykonuje operacje dzielenia
-# 5. Dla innych operacji wypisuje komunikat o bledzie.
+def kalkulator(wartosc1: int, operation: str, wartosc2: int):
 
 
-# Algorytm:
-# --------------------------
-# 1. PRZYPISZ parametry do zmiennych
-# 2. PRZEKONWERTUJ parametr(number) z ekranu na liczbę
-# 3. JEZELI parametr = "+" TO wykonaj dodawanie
-# 4. JEZELI parametr = "-" TO wykonaj odejmowanie
-# 5. JEZELI parametr = "*" TO wykonaj mnozenie
-# 6. JEZELI parametr = "//" TO wykonaj dzielenie
-# 7. W PRZECIWNYM RAZIE wypisz komunikat o bledzie
+    # 3. Warunk 1
+    def dodawanie(a: int, b: int):
+        if operation == "+":
+            return a + b
 
-# Implementacja:3
-# --------------------------
+    # 4. Warunk 2
+    def odejmowanie(a: int, b: int):
+        if operation == "-":
+            return a - b
+        
 
+    # 5. Warunk 3
+    def mnozenie(a: int, b: int):
+        if operation == "*":
+            return a * b
+            
 
-# 1. Przypisać parametry do zmiennych (wczytać parametr)
-num_1 = sys.argv[1]
-operation = sys.argv[2]
-num_2 = sys.argv[3]
+    # 6. Warunk 4
+    def dzielenie(a: int, b: int):
+         return a // b
+        
+    return dodawanie(wartosc1, wartosc2) or odejmowanie(wartosc1, wartosc2) or mnozenie(wartosc1, wartosc2) or dzielenie(wartosc1, wartosc2)
+        
 
-if num_2 == "0":
-    print("Drugi parametr nie moze byc zerem")
-    sys.exit(1)
-
-# 2. PRZEKONWERTUJ parametr(number) z ekranu na liczbę
-try:
-    par1 = int(num_1)
-    par2 = int(num_2) # "100" => 100
-except ValueError:
-    print("Błąd: Parametr powinien być liczbą") 
-    sys.exit(1) # Zakończenie programu z kodem wyjścia "1"
-
-
-# 3. Warunk 1
-def dodawanie(a, b):
-    if operation == "+":
-        result = a + b
-        print("Wynik dodawania wynosi: " ,result)
-
-# 4. Warunk 2
-def odejmowanie(a, b):
-    if operation == "-":
-        result = a - b
-        print("Wynik odejmowania wwynosi: " ,result)
-
-# 5. Warunk 3
-def mnozenie(a, b):
-    if operation == "*":
-        result = a * b
-        print("Wynik mnozenia wynosi: " ,result)
-
-# 6. Warunk 4
-def dzielenie(a, b):
-    if operation == "//":
-        try:
-            result = a // b
-        except ZeroDivisionError:
-            print("Nie mozna dzielic przez 0") 
-        sys.exit(1) # Zakończenie programu z kodem wyjścia "1"
     
-    print("Wynik dzielenia wynosi: " ,result)
-       
-
-   
-
 
 
 
